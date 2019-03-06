@@ -1,0 +1,113 @@
+/* Things Learned
+  1. transition: all ease 0.5s;  - smooth
+
+  2. border-image: linear-gradient(to top right, #ff7675, #81ecec);
+     border-image-slice: 1; 
+
+3. .button::after - opacity: 0;
+   .button:hover::after - opacity: 1; 
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Nova+Mono');
+
+body {
+  font-family: Nova Mono;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+section {
+  padding-left: 1em;
+  border-bottom: 1px solid rgba(200, 214, 229,0.5);
+  padding-bottom: 1em;
+}
+button {
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+/*
+  FACEBOOK BUTTON
+*/
+.facebook-style-button {
+  font-size: 1rem;
+  border-radius: 2px;
+  padding: 20px 40px;
+  font-weight: 600;
+}
+.facebook-style-dark {
+  box-shadow: inset 0 1px 0 0 #4d73bf;
+  background: #4267b2;
+  color: white;
+}
+.facebook-style-dark:hover {
+  background: #2b54a7;
+}
+/*
+  GRADIENT BUTTON
+*/
+.gradient-button-1 {
+  font-size: 1.4rem;
+  padding: 15px 30px;
+  box-sizing: border-box;
+  background: white;
+  color: #ff7675;
+  
+  border: 5px solid transparent;
+  border-image: linear-gradient(to top right, #ff7675, #81ecec);
+  border-image-slice: 1; /* to connect the 4 edges of border*/
+  
+  transition: all ease 0.5s;
+}
+.gradient-button-1:hover {
+  background: linear-gradient(to top right, #ff7675, #81ecec);
+  color: white;
+}
+
+.gradient-button-2 {
+  font-size: 1.4rem;
+  padding: 15px 30px;
+  box-sizing: border-box;
+  background: white;
+  color: #ff7675;
+  
+  border: 5px solid transparent;
+  border-image: linear-gradient(to right, #ff7675, transparent);
+  border-image-slice: 1;
+  transition: all ease 0.5s;
+}
+.gradient-button-2:hover {
+  background: linear-gradient(to right, #ff7675, transparent);
+  border-right: none;
+  color: white;
+}
+/*
+  ANIMATED BUTTON
+*/
+.animated-button-1 {
+  position: relative;
+  
+  padding: 20px 40px;
+  font-size: 1.4rem;
+  background-color: rgba(72, 219, 251,1.0);
+  background-size: 40px 40px;
+  border: 1px solid rgba(10, 189, 227,1.0);
+  box-shadow: inset 0 2px 0 0 rgba(10, 189, 227,1.0);
+  color: white;
+  transition: all ease 0.3s;
+}
+.animated-button-1::after {
+  position: absolute;
+  top: 33%;
+  right: 0.8em;
+  content: ">";
+  font-size: 1.1rem;
+  transition: all ease 0.3s;
+  opacity: 0;
+}
+.animated-button-1:hover {
+  padding: 20px 55px 20px 25px;
+}
+.animated-button-1:hover::after {
+  opacity: 1;
+}

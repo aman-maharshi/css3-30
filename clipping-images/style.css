@@ -1,0 +1,51 @@
+/* Things Learned
+  1. clip-path: circle(50% at 50% 50%); 
+     clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+
+  can be used on img or div, etc
+*/
+body {
+    margin: 0;
+  }
+  .container {
+    display: flex;
+    justify-content: space-around;
+    background: ;
+  }
+  .box {
+    width: 25vw;
+    margin: 1em;
+  }
+  .box img {
+    width: 100%;
+  }
+  .box1 img {
+    clip-path: circle(50% at 50% 50%);
+  }
+  .box2 img {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+  }
+  .box3 img {
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+  }
+    /* Christ Cross
+    clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%);
+    */
+    /* Right Arrow
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+    */
+  
+  @media (max-width:600px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .box {
+      width: 30%;
+      order: 10;
+    }
+    .box3 {
+      order: 1;
+    }
+    
+  }
