@@ -1,0 +1,52 @@
+body {
+    background: lightblue;
+}
+main {
+    max-width: 500px;
+    padding: 2em;
+    background: white;
+    margin: 0 auto;
+    margin-top: 4em;
+}
+.default, .fix {
+    padding: 1em;
+}
+.default {
+    border-bottom: 2px dotted gray;
+    padding-bottom: 2em;
+}
+.fix {
+    padding-top: 2em;
+}
+p {
+    font-size: 1.2rem;
+    color: darkred;
+}
+
+/*****************************
+    FIXING DEFAULT BROKEN IMG
+******************************/
+
+.image {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.image::after {
+    display: inherit; /* inherit the inline block display */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-width: 180px;
+    padding: 10px 5px 10px 45px;
+    content: ""attr(alt)" Not Found";
+    border: 1px dashed #888;
+    background-color: #f0f0f0; /* to hide the default display */ 
+    background-image: url(noimage.png);
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: 10px 6px;
+    font-size: 0.8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
