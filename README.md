@@ -1,4 +1,4 @@
-# Projects from CSS3 in 30 days
+# Projects in CSS3
 *below are the links to the projects, hosted with github pages*
 
 1. [Registration Form](https://aman-maharshi.github.io/css3-30/registration-form/)
