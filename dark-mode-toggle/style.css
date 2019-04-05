@@ -6,11 +6,14 @@ html {
     align-items: center;
     justify-content: center;
 
+    /* color variables for the default light theme */
     --bg: #fcfcfc;
     --bg-card: #ebebeb;
     --color-heading: #0077ff;
     --color-text: #333333;
 }
+
+/* color variables if the button is toggled, triggered by javascript */
 html[theme='dark'] {
     --bg: #333333;
     --bg-card: #434343;
