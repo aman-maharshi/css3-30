@@ -1,20 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass:400,700');
 $colors: (
     primary: #005dff,
+    primary-light: lighten(#005dff, 30%),
+    primary-dark: darken(#005dff, 30%),
+    hover: rgb(163, 52, 52),
     accent: #fff6bb
 );
+$border: 15px;
 
 body, html {
     height: 100%;
 }
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: Overpass, sans-serif;
+
     .bg {
         height: 100%;
         width: 100%;
         clip-path: polygon(100% 0, 100% 67%, 64% 100%, 0 100%, 0 0);
         background-color: map-get($colors, primary);
-        // position: absolute;
-        // z-index: -1;
+        position: absolute;
+        z-index: -1;
+    }
+
+    header a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        padding: 15px;
+    }
+    header a:hover {
+        color: black;  
+    }
+}
+
+main {
+     section#card {
+         background: white;
+         padding: 20px;
+         margin: 1em auto;
+         width: 80%;
+         border-radius: $border;
+         box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+         ul {
+             list-style-type: none;
+             margin: 0;
+             padding: 0;
+
+             li {
+                  margin-bottom: 10px;
+
+                  span {
+                      position: absolute;
+                      height: 25px;
+                      width: 25px;
+                      background-color: map-get($colors, primary-light);
+                      border-radius: 50%;
+                  }
+                  strong {
+                      display: inline-block;
+                      margin-left: max(40px);
+                  }
+             }
+         }
+     }
+     section#primary {
+         color: white;
+         text-align: center;
+        
+         h1 {
+             font-size: 3rem;
+             text-transform: uppercase;
+             margin-bottom: 10px
+         }
+         p {
+             margin-bottom: 40px;
+         }
+         a {
+             text-decoration: none;
+             color: map-get($colors, primary-dark);
+             font-weight: bold;
+             font-size: 1.2rem;
+             background: map-get($colors, accent);
+             text-transform: uppercase;
+             padding: 15px;
+             border-radius: $border;   
+             box-shadow: 0 5px 5px rgba(0,0,0,0.3);  
+         }
+         a:hover {
+             color: map-get($colors, hover);
+         }
     }
 }
