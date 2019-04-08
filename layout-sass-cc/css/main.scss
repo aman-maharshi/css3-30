@@ -4,9 +4,17 @@ $colors: (
     primary-light: lighten(#005dff, 30%),
     primary-dark: darken(#005dff, 30%),
     hover: rgb(163, 52, 52),
-    accent: #fff6bb
+    accent:#fff6bb
 );
 $border: 15px;
+
+// mixin for media query
+$desktop: 840px;
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content
+    }
+}
 
 body, html {
     height: 100%;
@@ -22,76 +30,133 @@ body {
         background-color: map-get($colors, primary);
         position: absolute;
         z-index: -1;
+    
+        // using the mixin desktop for media query for .bg element
+        @include desktop {
+            clip-path: polygon(0 0, 74% 0, 50% 100%, 0 100%);
+        }
     }
-
+    header {
+        // media query for the header
+        @include desktop {
+            width: 25%;
+        }
+    }
     header a {
         color: white;
         text-decoration: none;
         text-transform: uppercase;
         display: block;
         padding: 15px;
+        font-size: 1.2rem;
     }
     header a:hover {
-        color: black;  
+        color: black;
     }
 }
 
 main {
-     section#card {
-         background: white;
-         padding: 20px;
-         margin: 1em auto;
-         width: 80%;
-         border-radius: $border;
-         box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    // media query mixin for the main element
+    @include desktop {
+        display: grid;
+        grid-template-columns: 1fr 1fr; // both sections 50% wide
+        grid-template-areas: "primary card"; 
+    }
 
-         ul {
-             list-style-type: none;
-             margin: 0;
-             padding: 0;
+    // First Section 
+    section#card {
+        background: white;
+        padding: 20px;
+        margin: 1em auto;
+        width: 80%;
+        border-radius: $border;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 
-             li {
-                  margin-bottom: 10px;
+        // media query for card
+        @include desktop{
+            grid-area: card;
+            height: fit-content;
+            align-self: center;
+            margin: 1em;
+        }
 
-                  span {
-                      position: absolute;
-                      height: 25px;
-                      width: 25px;
-                      background-color: map-get($colors, primary-light);
-                      border-radius: 50%;
-                  }
-                  strong {
-                      display: inline-block;
-                      margin-left: max(40px);
-                  }
-             }
-         }
-     }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin-bottom: 10px;
+
+                span {
+                    position: absolute;
+                    height: 25px;
+                    width: 25px;
+                    background-color: map-get($colors, primary-light);
+                    border-radius: 50%;
+                }
+                strong {
+                    display: inline-block;
+                    margin-left: max(40px);
+                }
+            }
+        }
+    }
+
+     // Second Section
      section#primary {
-         color: white;
-         text-align: center;
-        
-         h1 {
-             font-size: 3rem;
-             text-transform: uppercase;
-             margin-bottom: 10px
-         }
-         p {
-             margin-bottom: 40px;
-         }
-         a {
-             text-decoration: none;
-             color: map-get($colors, primary-dark);
-             font-weight: bold;
-             font-size: 1.2rem;
-             background: map-get($colors, accent);
-             text-transform: uppercase;
-             padding: 15px;
-             border-radius: $border;   
-             box-shadow: 0 5px 5px rgba(0,0,0,0.3);  
-         }
-         a:hover {
-             color: map-get($colors, hover);
-         }
+        color: white;
+        text-align: center;
+
+        // media query for primary
+        @include desktop {
+        grid-area: primary;
+        text-align: left;
+        margin: 4em 0 0 4em;
+
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 40px;
+        }
+        a {
+            text-decoration: none;
+            color: map-get($colors, primary-dark);
+            font-weight: bold;
+            font-size: 1.2rem;
+            background: map-get($colors, accent);
+            text-transform: uppercase;
+            padding: 15px;
+            border-radius: $border;
+            box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+        }
+        a:hover {
+            color: map-get($colors, hover);
+        }
     }
 }
+
+
+// @media (min-width: 800px) {
+//     main {
+//         display: flex;
+//         align-items: center;
+//         height: 80vh;
+//     }    
+//     main > * {
+//     }
+//     #card {
+//         order: 2;
+//         flex-basis: 30%;
+//     }
+//     #primary {
+//         flex-basis: 40%;
+//         margin-left: 4em;
+
+//     }
+// }
