@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Roboto');
+
+:root {
+    --primary-color: rgba(13, 110, 139, 0.75);
+    --overlay-color: rgba(24, 39, 51, 0.85);
+    --menu-speed: 0.75s;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Lato, sans-serif;
+    line-height: 1.4;
+}
+/************
+    HEADER
+*************/
+.showcase {
+    background-color: var(--primary-color);
+    color: white;
+    height: 100vh;
+    position: relative; /* overlay will be positioned absolute inside it*/
+
+}
+.showcase::before { /* overlay */
+    content: ''; 
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: url(../img/2.jpg) no-repeat center center/cover; 
+    
+}
+.container {
+    max-width: 960px;
+    margin: auto; /* centering */
+    /* overflow: hidden; */
+    padding: 0 3em; 
+}
