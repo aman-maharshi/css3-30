@@ -1,3 +1,72 @@
 .menu-wrapper {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1; /* initially it will be under the --bg-color, this will make it on top */
+}
+.toggle {
+    opacity: 0; /* hiding the checkbox */
+    cursor: pointer;
+    z-index: 2; /* invisible toggle button on top of hamburger*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+}
+.hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 60px;
+    padding: 15px;
+
+    /* to center the hamburger lines */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/********************
+    Hamburger Lines
+********************/
+.hamburger > div { /* immediate div after hamburger */
+    height: 3px;
+    width: 100%;
+    background: black;
+    transition: all 0.3s ease;
+}
+.hamburger > div::before {
+    content: '';
+    height: 3px;
+    background: black;
+    position: absolute;
+    top: 20px;
+    width: 30px;
+} 
+.hamburger > div::after {
+    content: '';
+    height: 3px;
+    background: black;
+    position: absolute;
+    bottom: 19px;
+    width: 30px;
+} 
+.toggle:checked + .hamburger > div {
+    transform: rotate(135deg);
+}
+/* 3 horizontal lines to  X*/
+.toggle:checked + .hamburger > div::before, 
+.toggle:checked + .hamburger > div::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+.toggle:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+}
+
+
+
+.menu {
     display: none;
 }

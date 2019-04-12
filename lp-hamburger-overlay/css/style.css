@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Roboto');
 :root {
     --bg-color: rgba(255,255,255,0.3); /* shade of white */
-    --overlay-color: rgba(24, 39, 51, 0.85);
+    --overlay-color: rgba(0,0,0,0.8);
     --menu-speed: 0.75s;
 }
 * {
