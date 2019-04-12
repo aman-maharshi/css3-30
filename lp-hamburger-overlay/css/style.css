@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Roboto');
-
 :root {
-    --primary-color: rgba(13, 110, 139, 0.75);
+    --bg-color: rgba(255,255,255,0.3); /* shade of white */
     --overlay-color: rgba(24, 39, 51, 0.85);
     --menu-speed: 0.75s;
 }
@@ -17,14 +16,19 @@ body {
 /************
     HEADER
 *************/
-.showcase {
-    background-color: var(--primary-color);
-    color: white;
-    height: 100vh;
-    position: relative; /* overlay will be positioned absolute inside it*/
-
+.container {
+    max-width: 960px;
+    margin: auto; /* centering */
+    /* overflow: hidden; */
 }
-.showcase::before { /* overlay */
+.showcase {
+    background-color: var(--bg-color); 
+    color: black;
+    height: 100vh;
+    position: relative; /* overlay will be positioned absolute inside it */
+    padding: 1em;
+}
+.showcase::before { /* overlay (image behind the background) */
     content: ''; 
     height: 100%;
     width: 100%;
@@ -32,12 +36,32 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
-    background: url(../img/2.jpg) no-repeat center center/cover; 
-    
+    background: url(../img/1.jpg) no-repeat center center/cover;    
 }
-.container {
-    max-width: 960px;
-    margin: auto; /* centering */
-    /* overflow: hidden; */
-    padding: 0 3em; 
+.showcase, .showcase-inner { /* to center */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container h1 {
+    font-size: 3.5rem;
+}
+.container p {
+    font-size: 1.2rem;
+}
+.btn {
+    margin-top: 1em;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    border: 1px solid black;
+    transition: background 0.3s ease-in;
+    border-radius: 2px;   
+}
+.btn:hover {
+    background: rgba(0,0,0,0.8);
+    color: white;
 }
