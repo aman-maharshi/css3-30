@@ -4,6 +4,7 @@
     --overlay-color: rgba(0,0,0,0.8);
     --menu-speed: 0.75s;
     --accent-color: lightpink;
+    --icon-color: rgb(144, 233, 231);
 }
 * {
     box-sizing: border-box;
@@ -65,4 +66,52 @@ body {
 .btn:hover {
     background: rgba(0,0,0,0.8);
     color: white;
+}
+
+/*********************
+    SECTION: SKILLS
+*********************/
+
+#skills {
+    padding: 2em;
+    background-color: rgb(240, 240, 240);
+    margin: 0 auto;
+}
+.icon-row {
+    padding: 1em;
+    font-size: 2rem;
+    width: 100%;
+    border: 1px solid var(--icon-color);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+@media (max-width: 500px) {
+    .icon-row {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.icon-row > p {
+    /* border: 1px solid gray; */
+    padding: 0.5em 0.8em;
+}
+/* Icon Colors */
+.icon-html5 {
+    color: #f16529; 
+}
+.icon-css3 {
+    color: #2965f1;
+}
+.icon-sass {
+    color: #c69;
+}
+.icon-bootstrap {
+    color: #602C50;
+}
+.icon-javascript {
+    color: #F0DB4F;
+}
+.icon-react {
+    color: #00d8ff;
 }
