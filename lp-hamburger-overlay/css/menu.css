@@ -7,7 +7,7 @@
 .toggle { /* invisible toggle button over the hamburger lines*/
     opacity: 0; /* hiding the checkbox */
     cursor: pointer;
-    z-index: 2; /* invisible toggle button on top of hamburger*/
+    z-index: 3; /* invisible toggle button on top of hamburger*/
     position: absolute;
     top: 0;
     left: 0;
@@ -27,7 +27,8 @@
     align-items: center;
     justify-content: center;
 
-    background-color: pink;
+    background-color: var(--accent-color);
+    z-index: 2;
 }
 /********************
     Hamburger Lines
@@ -78,7 +79,70 @@
     transform: rotate(225deg);
 }
 
-
+/***********
+    Menu 
+************/
 .menu {
-    display: none;
+    /* cover up the entire screen */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu > div { /* first div after .menu */
+    background: var(--overlay-color);
+    /* border-radius: 50%;
+    height: 200vw;
+    width: 200vw;
+    flex: none; */
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+.menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.menu > div > div > ul > li {
+    list-style: none;
+    font-size: 2em;
+    padding: 0.5em;
+
+}
+.menu > div > div > ul > li > a {
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+}
+.menu > div > div > ul > li > a:hover {
+    color: white;
+}
+
+
+/* Show Menu */
+.toggle:checked ~ .menu {
+    visibility: visible;   
+}
+.toggle:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+}
+.toggle:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
