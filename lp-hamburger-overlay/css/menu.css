@@ -4,7 +4,7 @@
     left: 0;
     z-index: 1; /* initially it will be under the --bg-color, this will make it on top */
 }
-.toggle {
+.toggle { /* invisible toggle button over the hamburger lines*/
     opacity: 0; /* hiding the checkbox */
     cursor: pointer;
     z-index: 2; /* invisible toggle button on top of hamburger*/
@@ -20,51 +20,63 @@
     left: 0;
     height: 60px;
     width: 60px;
-    padding: 15px;
+    padding: 1rem;
 
     /* to center the hamburger lines */
     display: flex;
     align-items: center;
     justify-content: center;
+
+    background-color: pink;
 }
 /********************
     Hamburger Lines
 ********************/
 .hamburger > div { /* immediate div after hamburger */
-    height: 3px;
+    /* middle line  */
+    position: relative; /* top and bottom lines will be positioned absolute to this */
     width: 100%;
+    height: 3px;
     background: black;
-    transition: all 0.3s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.3s ease; 
 }
-.hamburger > div::before {
+.hamburger > div::before { /* first line */
     content: '';
-    height: 3px;
-    background: black;
     position: absolute;
-    top: 20px;
-    width: 30px;
-} 
-.hamburger > div::after {
+    z-index: 1;
+    width: 100%;
+    height: 3px;
+    top: -10px;
+    background: black;
+}
+.hamburger > div::after { /* last line */
     content: '';
-    height: 3px;
-    background: black;
     position: absolute;
-    bottom: 19px;
-    width: 30px;
-} 
-.toggle:checked + .hamburger > div {
+    z-index: 1;
+    width: 100%;
+    height: 3px;
+    top: 10px;
+    background: black;
+}
+
+.toggle:checked + .hamburger > div { /* styling hamburger div when the invisible checkbox is checked*/
     transform: rotate(135deg);
 }
-/* 3 horizontal lines to  X*/
+/* making the lines an X when checkbox is checked*/
 .toggle:checked + .hamburger > div::before, 
 .toggle:checked + .hamburger > div::after {
     top: 0;
-    transform: rotate(90deg);
-}
+    transform: rotate(90deg); 
+}  
+/* rotate the X on hover when checkbox is checked */
 .toggle:checked:hover + .hamburger > div {
     transform: rotate(225deg);
 }
-
 
 
 .menu {
