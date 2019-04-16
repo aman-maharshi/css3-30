@@ -1,0 +1,154 @@
+/* Things Learned
+  1. margin-top: 10px
+     vertical-align: top;
+     line-height: 1;
+  
+  2. .pricing-body ul li:nth-child(2n) {} - even li  
+     .pricing-body ul li:nth-child(2n + 1) {} - odd li
+*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu');
+:root {
+    --white: #fff;
+    --white-dark: #f8f8f8;
+    --gray: #555;
+    --gray-light: #777;
+    --gray-dark: #333;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Open Sans, sans-serif;
+}
+body {
+    background-color: rgba(0,0,0,0.2);
+}
+section {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+section h2 {
+    margin-top: 1em;
+    font-size: 2rem;
+    color: var(--gray-light);
+}
+.pricing-table {
+    /* max-width: 90vw; */
+    margin: 3em auto;
+ }
+.pricing-table > div { /* all the div's with parent .pricing-table */
+    background: var(--white);
+    color: var(--gray);
+    display: block;
+    width: 45%;
+    float: left;
+}
+.pricing-block {
+    border-radius: 5px;
+}
+.pricing-table > div:not(:last-child) {
+    margin-right: 2em;
+}
+.pricing-header {
+    text-transform: uppercase;
+    padding: 30px 20px 40px;
+}
+.pricing-heading {
+    font-size: 1.4rem;
+    font-weight: bold;   
+}
+.pricing-price {
+    color: var(--gray-light);
+    padding-left: 1em;
+}
+.pricing-price > span {
+    display: inline-block;
+    
+}
+.pricing-price__currency {
+    margin-top: 10px;
+    vertical-align: top;
+    font-size: 2rem;
+    /* line-height: 1; */
+    opacity: 0.6;
+}
+.pricing-price__value {
+    font-size: 5rem;
+    font-weight: bold;
+    line-height: 1;
+}
+.pricing-price__duration {
+    margin-top: 10px;
+    vertical-align: top;
+    font-size: 1.4rem;
+    line-height: 1;
+    opacity: 0.6;
+}
+.pricing-body ul {
+    list-style: none;
+}
+.pricing-body ul li {
+    padding: 10px 20px;
+}
+.pricing-body ul li:nth-child(2n) {
+    background-color: var(--white);
+}
+.pricing-body ul li:nth-child(2n+1) {
+    background-color: var(--white-dark);
+} 
+.pricing-footer {
+    padding: 40px 0 0 ;
+}
+.pricing-button,
+.pricing-button:link, 
+.pricing-button:visited {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: var(--gray-dark);
+    color: var(--white);
+}
+.pricing-button:hover {
+    color: lightcoral;
+}
+
+/* Popular Table */
+.pricing-popular {
+    margin-top: -20px;
+}
+.pricing-popular .pricing-header {
+    padding-top: 50px;
+}
+.pricing-popular .pricing-price {
+    color: lightcoral;
+}
+.pricing-popular .pricing-button {
+    background-color: lightcoral;
+}
+.pricing-popular .pricing-button:hover {
+    background-color: var(--gray-dark);
+    color: lightcoral;
+}
+
+
+@media screen and (max-width: 750px) {
+    .pricing-table {
+        margin: auto;
+        padding: 4em;
+    }
+    .pricing-table > div {
+        float: none;
+        width: 100%;
+    }
+    .pricing-table > div:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .pricing-table {
+        padding: 2em;
+    }
+} 
