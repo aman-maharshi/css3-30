@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 :root {
     --black: #202329;
     --gray-dark: #40434A;
@@ -6,6 +7,12 @@
 }
 body {
     background-color: var(--cream);
+    font-family: 'Lato', sans-serif;
+}
+.custom-bg {
+    background-color: var(--cyan);
+    color: white !important;
+    font-size: 1.1em;
 }
 /*
     NAV BAR
@@ -34,5 +41,37 @@ h1 small {
 @media (min-width: 992px) {
     #header .dropdown {
         margin-top: 1.5em;
+    }
+}
+/*
+    MAIN
+*/
+#main {
+    margin-top: 1em;
+}
+.panel-footer div > div {
+    /* border: 1px solid pink; */
+    padding: 2em;
+}
+.panel-footer span {
+    font-size: 3rem;
+}
+.panel-footer span p {
+    display: inline;
+    padding-left: 5px;
+    font-family: 'Lato', sans-serif;
+    color: var(--black);
+}
+.well {
+    background-color: rgba(0,0,0,0.1);
+}
+.well p:nth-child(2){
+    font-size: 1.5em;
+    color: var(--gray-dark)
+}
+@media (max-width: 992px) {
+    .panel-footer div > div {
+        padding-top: 5px;
+        padding-bottom: 0;
     }
 }
