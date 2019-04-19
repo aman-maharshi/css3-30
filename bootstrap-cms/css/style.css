@@ -49,14 +49,13 @@ h1 small {
 #main {
     margin-top: 1em;
 }
-.panel-footer div > div {
-    /* border: 1px solid pink; */
+.panel-body div > div {
     padding: 2em;
 }
-.panel-footer span {
+.panel-body span {
     font-size: 3rem;
 }
-.panel-footer span p {
+.panel-body span p {
     display: inline;
     padding-left: 5px;
     font-family: 'Lato', sans-serif;
@@ -70,8 +69,11 @@ h1 small {
     color: var(--gray-dark)
 }
 @media (max-width: 992px) {
-    .panel-footer div > div {
+    .panel-body div > div {
         padding-top: 5px;
         padding-bottom: 0;
     }
+}
+.progress-bar {
+    background-color: var(--cyan);
 }
