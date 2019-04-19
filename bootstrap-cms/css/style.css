@@ -1,0 +1,17 @@
+:root {
+    --black: #1d191f;
+    --white: #fff;
+    --red: #e66c7e;
+}
+.navbar {
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 0;
+    border: none;
+}
+.navbar .navbar-brand {
+    color: var(--white);
+}
+.navbar .navbar-nav li a {
+    color: var(--white);
+}
