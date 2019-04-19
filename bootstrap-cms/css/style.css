@@ -1,17 +1,38 @@
 :root {
-    --black: #1d191f;
-    --white: #fff;
-    --red: #e66c7e;
+    --black: #202329;
+    --gray-dark: #40434A;
+    --cream: #EFEEEB;
+    --cyan: #009A9C;
 }
+body {
+    background-color: var(--cream);
+}
+/*
+    NAV BAR
+*/
 .navbar {
-    background-color: var(--red);
-    color: var(--white);
     border-radius: 0;
-    border: none;
+    background-color: var(--black);
+    margin-bottom: 0;
 }
-.navbar .navbar-brand {
-    color: var(--white);
+.navbar .navbar-nav > .active > a,
+.navbar .navbar-nav > .active > a:hover {
+    background-color: var(--cyan);
 }
-.navbar .navbar-nav li a {
-    color: var(--white);
+/*
+    HEADER
+*/
+#header {
+    background-color: var(--gray-dark);
+    margin-top: 0; 
+    color: var(--cream);
+    padding: 1em;
+}
+h1 small {
+    font-size: 1.75rem;
+}
+@media (min-width: 992px) {
+    #header .dropdown {
+        margin-top: 1.5em;
+    }
 }

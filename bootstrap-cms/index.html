@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CMS Admin</title>
+    <title>Admin Area | Dashborad</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-inverse">
         <div class="container">
             <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -21,16 +21,45 @@
             <a class="navbar-brand" href="#">CMS Admin</a>
             </div>
             
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Dashborad <span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="index.html">Dashborad <span class="sr-only">(current)</span></a></li>
                 <li><a href="#">Pages</a></li>
                 <li><a href="#">Posts</a></li>
                 <li><a href="#">Users</a></li>
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden-xs"><a href="index.html">Welcome, Aman<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            
             </div>
         </div>
     </nav>
+    <header id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10">
+            <h1><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+              Dashborad <small>Manage your website</small></h1>
+          </div>
+          <div class="col-md-2">
+              <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Dropdown
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                    <li><a href="#">Add Page</a></li>
+                    <li><a href="#">Add Post</a></li>
+                    <li><a href="#">Add User</a></li>
+                  </ul>
+                </div>
+          </div>
+        </div>
+      </div>
+
+    </header>
               
     
     
