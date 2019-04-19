@@ -7,6 +7,7 @@
 1. [Clipping Images](https://aman-maharshi.github.io/css3-30/clipping-images)
 1. [Fixing Broken Images](https://aman-maharshi.github.io/css3-30/broken-images/)
 1. [Pricing Table](https://aman-maharshi.github.io/css3-30/pricing-table/)
+1. [CMS using Bootstrap](https://aman-maharshi.github.io/css3-30/bootstrap-cms/)
 
 ### Portfolio Components
 
