@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin Area | Dashborad</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Pages | Dashborad</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
     <nav class="navbar navbar-inverse">
@@ -18,18 +18,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">CMS Admin</a>
+            <a class="navbar-brand" href="../index.html">CMS Admin</a>
             </div>
             
             <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">Dashborad <span class="sr-only">(current)</span></a></li>
-                <li><a href="snippets/pages.html">Pages</a></li>
+                <li><a href="../index.html">Dashborad <span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="pages.html">Pages</a></li>
                 <li><a href="#">Posts</a></li>
                 <li><a href="#">Users</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden-xs"><a href="index.html">Welcome, Aman<span class="sr-only">(current)</span></a></li>
+                    <li class="hidden-xs"><a href="../index.html">Welcome, Aman<span class="sr-only">(current)</span></a></li>
                     <li><a href="#">Logout</a></li>
                 </ul>
             
@@ -93,65 +93,7 @@
           </div>
 
           <div class="col-md-9">
-              <div class="panel panel-default">
-                  <div class="panel-body custom-bg">
-                    Website Overview
-                  </div>
-                  <div class="panel-body">
-                      <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                          <div class="row well text-center">
-                            <span class="glyphicon glyphicon-user" aria-hidden="true"><p>32</p></span><p>Users</p>
-                          </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                          <div class="row well text-center">
-                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"><p>16</p></span><p>Pages</p>
-                          </div>  
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                          <div class="row well text-center">
-                              <span class="glyphicon glyphicon-pencil" aria-hidden="true"><p>56</p></span><p>Post</p>
-                          </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                          <div class="row well text-center">
-                              <span class="glyphicon glyphicon-stats" aria-hidden="true"><p>5,728</p></span><p>Visits</p> 
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-
-                <div class="panel panel-default">
-                    <div class="panel-body custom-bg">
-                        Latest Users
-                      </div>
-                  <div class="panel-body">
-                    <table class="table table-striped">
-                     <tr>
-                       <th>Name</th>
-                       <th>Email</th>
-                       <th>Joined</th>
-                     </tr>
-                     <tr>
-                       <td>Rahul</td>
-                       <td>rahuljain@gmail.com</td>
-                       <td>April 13 2019</td>
-                     </tr>
-                     <tr>
-                        <td>Aditi</td>
-                        <td>aditithakur@outlook.com</td>
-                        <td>March 28 2019</td>
-                      </tr>
-                      <tr>
-                          <td>Priya</td>
-                          <td>priyasharma@gmail.com</td>
-                          <td>March 21 2019</td>
-                        </tr>
-                    </table>                        
-                  </div>
-                </div>
+   
           </div>
         </div>
       </div>
@@ -159,30 +101,28 @@
 
     <!--  MODALS  -->
     <div class="modal fade" id="addPage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Add Page</h4>
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Add Page</h4>
+                </div>
+                <div class="modal-body">
+                        Website Overview
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
           </div>
-          
-          <div class="modal-body">  
-            Coming Soon!
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-      
+
     <!--  
       ADD A FOOTER
     -->
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
   </body>
 </html>
