@@ -1,3 +1,9 @@
+/* Things Learned
+    1. give both footer and .page-content::after a specific height
+    2. and add a negative margin bottom to .page-content equal to the height of footer
+*/
+
+
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
 :root {
     font-size: 1.1rem;
@@ -54,3 +60,23 @@ footer a:hover {
         background-color: lightyellow;
     }
 }
+/*
+    STICKY FOOTER
+*/
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+.page-content {
+    min-height: 100%;
+    margin-bottom: -6.5em;
+}
+.page-content::after {
+    content: "";
+    display: block;
+}
+footer, .page-content::after {
+    height: 6em;
+}
+
