@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+:root {
+    font-size: 1.1rem;
+    --header-text: #323B3C;
+    --para-text: #516163
+}
+* {
+    font-family: PT Sans Narrow, sans-serif;
+}
+header {
+    color: var(--header-text);
+    letter-spacing: 5px;
+    background-color: yellow;
+    max-width: 1100px;
+    margin: auto;
+}
+header h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+section p {
+    color: var(--para-text);
+    font-size: 1.2rem;
+}
+footer {
+    background-color: lightgray;
+    height: 4em;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--para-text);
+}
+footer a {
+    text-decoration: none;
+    color: var(--para-text);
+}
+footer a:hover {
+    color: var(--header-text);
+}
+
+@media(max-width: 700px) {
+    section p {
+        font-size: 1.1rem;
+    }
+    .lightyellow {
+        padding: 0.5em;
+        background-color: lightyellow;
+    }
+}
