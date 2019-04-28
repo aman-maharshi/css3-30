@@ -2,8 +2,6 @@
     1. give both footer and .page-content::after a specific height
     2. and add a negative margin bottom to .page-content equal to the height of footer
 */
-
-
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
 :root {
     font-size: 1.1rem;
