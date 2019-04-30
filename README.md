@@ -9,6 +9,7 @@
 1. [Fancy Buttons](https://aman-maharshi.github.io/css3-30/fancy-buttons/)
 1. [Clipping Images](https://aman-maharshi.github.io/css3-30/clipping-images)
 1. [Fixing Broken Images](https://aman-maharshi.github.io/css3-30/broken-images/)
+1. [Preloader](https://aman-maharshi.github.io/css3-30/preloader/)
 
 
 ### Portfolio Components
