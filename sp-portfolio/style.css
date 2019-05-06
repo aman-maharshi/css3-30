@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Lato');
 
 :root {
     --gradient1: linear-gradient(90deg,aqua,lightpink 80%);
@@ -7,7 +7,7 @@
 }
 * {
     box-sizing: border-box;
-    font-family: Open Sans, sans-serif;
+    font-family: Lato, sans-serif;
 }
 body {
     margin: 0;
@@ -29,8 +29,8 @@ nav ul {
     justify-content: space-around;
 }
 nav ul li a {
-    font-size: 1.4rem;
-    color: white;
+    font-size: 1.2rem;
+    color: whitesmoke;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -46,10 +46,9 @@ main {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.034);
     padding: 1em;
-    min-height: 90vh;
 }
 main img {
-    width: 225px;
+    width: 200px;
     border-radius: 50%;
 }
 .about {
@@ -66,15 +65,15 @@ main img {
     font-size: 1.3rem;
     color: var(--gray);
     line-height: 2rem;
-    padding-left: 0.5rem;
+    padding-left: 1rem;
 
 }
 .about a {
     text-decoration: none;
     background: #2376ae;
     padding: 8px 16px;
-    color: white;
-    font-size: 1.2rem;
+    color: whitesmoke;
+    font-size: 1.1rem;
     border-radius: 1em;
     align-self: center;
     transition: color 0.3s ease;
@@ -91,7 +90,6 @@ footer {
     padding-top: 2em;
     text-align: center;
     width: 100%;
-    z-index: 1;
 }
 footer a .fa {
     font-size: 1.75rem;
@@ -105,3 +103,53 @@ footer a .fa:hover {
 footer p {
     font-size: 0.9rem; 
 }
+/*
+    MEDIA QUERIES: MEDIUM SIZE SCREENS
+*/
+@media (min-width: 800px) {
+    .container {
+        display: flex;
+        height: 85vh;
+    }
+    nav {
+        flex: 1 1 25%;
+    }
+    main {
+        flex: 1 1 75%;
+    }
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 2em;
+    }
+    nav ul li:not(:last-child) {
+        margin-bottom: 2em;
+    }
+    nav ul li a {
+        font-size: 1.4rem;
+    }
+    main {
+        padding: 2em;
+    }
+    main img {
+        width: 225px;
+    }
+    .about h1 {
+        font-size: 3.5rem;
+        letter-spacing: 5px;
+    } 
+    .about p {
+        line-height: 1.75em;
+    }
+    .about a {
+        font-size: 1.2em
+    }
+}
+/*
+    MEDIA QUERIES: LARGE SIZE SCREENS
+*/
+@media (min-width: 1000px) {
+    main {
+        background: lightgray;
+    }
+} 
