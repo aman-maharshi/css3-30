@@ -31,10 +31,37 @@ nav ul li a {
     font-size: 1.2rem;
     color: var(--gray);
     text-decoration: none;
-    transition: color 0.3s ease;
+}
+/*
+    NAV HOVER EFFECT
+*/
+nav ul li a {
+    padding: 0.4em;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all 0.4s;
 }
 nav ul li a:hover {
     color: black;
+}
+nav ul li a {
+  position: relative;
+}
+nav ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; /* start from center */
+  width: 0%;
+  content: '';
+  background: black;
+  height: 1px;
+}
+nav ul li a:hover:after {
+  width: 100%;
 }
 /*
     MAIN
@@ -79,36 +106,8 @@ main img {
     transition: color 0.3s ease;
     background-image: var(--gradient)
 }
-/*
-    NAV HOVER EFFECT
-*/
-nav ul li a {
-    padding: 0.4em;
-}
-nav ul li a,
-nav ul li a:after,
-nav ul li a:before {
-    transition: all 0.4s;
-}
-nav ul li a:hover {
+.about a:hover {
     color: black;
-}
-nav ul li a {
-  position: relative;
-}
-nav ul li a:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto; /* start from center */
-  width: 0%;
-  content: '';
-  background: black;
-  height: 1px;
-}
-nav ul li a:hover:after {
-  width: 100%;
 }
 /*
     FOOTER
