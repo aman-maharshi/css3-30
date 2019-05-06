@@ -1,24 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Lato');
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto|Ubuntu');
 
 :root {
-    --gradient1: linear-gradient(90deg,aqua,lightpink 80%);
-    --gradient2: linear-gradient(to right, #2376ae, #c16ecf);
+    --gradient: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
     --gray: rgb(83, 83, 83);
+    --navy-dark: #1e3046;
 }
 * {
     box-sizing: border-box;
-    font-family: Lato, sans-serif;
+    font-family: Ubuntu, sans-serif;
 }
 body {
     margin: 0;
     padding: 0;
 }
-
 /*
     NAV
 */
 nav {
-    background-image: var(--gradient2);
+    background-image: var(--gradient);
     padding: 2em 1em;
 }
 nav ul {
@@ -30,7 +29,7 @@ nav ul {
 }
 nav ul li a {
     font-size: 1.2rem;
-    color: whitesmoke;
+    color: var(--gray);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -45,6 +44,7 @@ main {
     flex-direction: column;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.034);
+    /* background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); */
     padding: 1em;
 }
 main img {
@@ -60,6 +60,7 @@ main img {
     font-size: 3rem;
     margin-bottom: 0;
     text-align: center;
+    color: var(--navy-dark);
 }
 .about p {
     font-size: 1.3rem;
@@ -70,17 +71,17 @@ main img {
 }
 .about a {
     text-decoration: none;
-    background: #2376ae;
     padding: 8px 16px;
-    color: whitesmoke;
+    color: var(--gray);
     font-size: 1.1rem;
     border-radius: 1em;
     align-self: center;
     transition: color 0.3s ease;
+    background-image: var(--gradient)
 }
 .about a:hover {
     color: black;
-    background: #c16ecf;
+    
 }
 /*
     FOOTER
@@ -88,8 +89,10 @@ main img {
 footer {
     color: #ccc; /* light gray */
     padding-top: 2em;
+    padding-bottom: 1em;
     text-align: center;
     width: 100%;
+    
 }
 footer a .fa {
     font-size: 1.75rem;
@@ -98,10 +101,10 @@ footer a .fa {
     transition: color 0.3s ease
 }
 footer a .fa:hover {
-    color: black; 
+    color: var(--navy-dark); 
 }
 footer p {
-    font-size: 0.9rem; 
+    font-size: 1rem; 
 }
 /*
     MEDIA QUERIES: MEDIUM SIZE SCREENS
@@ -134,10 +137,6 @@ footer p {
     main img {
         width: 225px;
     }
-    .about h1 {
-        font-size: 3.5rem;
-        letter-spacing: 5px;
-    } 
     .about p {
         line-height: 1.75em;
     }
@@ -149,7 +148,41 @@ footer p {
     MEDIA QUERIES: LARGE SIZE SCREENS
 */
 @media (min-width: 1000px) {
+    nav {
+        max-width: 20%;
+        display: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+    }
+    nav ul {
+        margin-top: 4em;
+    }
+    nav ul li a {
+        font-size: 1.6rem;
+    }
     main {
-        background: lightgray;
+        flex-direction: row-reverse;
+    }
+    main > * {
+        margin: 1em;
+    }
+    main img {
+        flex-basis: 1 0 30%;
+        margin-top: -7em;
+        width: 250px;
+    }
+    main .about {
+        padding: 1em;
+        flex-basis: 70%;
+    }
+    .about h1 {
+        font-size: 4rem;
+    }
+    .about p {
+        font-size: 1.6rem;
+    }
+    .about a {
+        font-size: 1.25rem;
     }
 } 
