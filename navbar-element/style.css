@@ -3,28 +3,71 @@
 * {
     font-family: Open Sans, sans-serif;
 }
-
+body {
+    margin: 0;
+}
+/*
+    NAV BAR TOGGLE FUNCTIONALITY
+*/
 nav {
     position: relative;
+    overflow: hidden;
 }
 nav label {
-    font-size: 2em;
+    font-size: 2.5em;
     cursor: pointer;
     display: none;
-    padding: 5px;
-    width: 30px;
+    width: 36px;
+    margin-left: 10px;
 }
 #toggle {
-    display: none;
-}
-#nav-bar {
     display: none;
 }
 @media (max-width: 600px) {
     nav label {
         display: block;
     }
+    #nav-bar {
+        display: none;
+    }
 }
 #toggle:checked + #nav-bar {
     display: block;
+}
+/*
+    NAV BAR STYLING
+*/
+nav {
+    border-bottom: 2px solid gray;
+}
+nav ul {
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+nav ul li {
+    text-align: center;
+}
+nav ul a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-size: 25px;
+}
+nav ul a:hover {
+    border-bottom: 1px solid black;
+}
+
+@media (min-width: 601px) {
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav li {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    #toggle:checked + #nav-bar {
+        display: flex;
+    }
 }
