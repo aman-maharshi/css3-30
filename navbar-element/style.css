@@ -33,6 +33,9 @@ nav label {
     #nav-bar {
         display: none;
     }
+    #nav-bar > * {
+        margin-bottom: 5px;
+    }
 }
 #toggle:checked + #nav-bar {
     display: block;
@@ -58,9 +61,11 @@ nav ul a {
     color: black;
     cursor: pointer;
     font-size: 25px;
+    transition: color 0.3s ease;
 }
 nav ul a:hover {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(43, 97, 61);
+    color: rgb(53, 124, 77);
 }
 @media (min-width: 601px) {
     nav ul {
@@ -80,7 +85,7 @@ nav ul a:hover {
 */
 #heading {
     font-size: 3rem;
-    font-family: Caveat, sans-serif;
+    font-family: Caveat, Cambria;
     position: absolute;
     left: 25%;
 }
