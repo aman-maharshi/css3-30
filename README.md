@@ -10,6 +10,7 @@
 1. [Clipping Images](https://aman-maharshi.github.io/css3-30/clipping-images)
 1. [Fixing Broken Images](https://aman-maharshi.github.io/css3-30/broken-images/)
 1. [Preloader](https://aman-maharshi.github.io/css3-30/preloader/)
+1. [Carousel Pure CSS](https://aman-maharshi.github.io/css3-30/carousel-pure-css/)
 
 
 ### Portfolio Components

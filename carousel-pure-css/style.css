@@ -5,7 +5,6 @@
 :root {
   --gray-bg: #E8E8E8;
   --blue-icon: #5C9EEB;
-  --black-header: #1A1A1A;
   --black-text: #3E3E3E;
   --white: #FFFFFF;
 
@@ -13,12 +12,14 @@
 body {
   font-family: Tw Cen MT, sans-serif;
   margin: 0;
-  background-color: var(--gray-bg);b
+  background-color: var(--gray-bg);
 }
 h1 {
   text-align: center;
   margin-top: 3em;
+  margin-bottom: 1.2em;
   font-size: 3em;
+  color: var(--black-text);
 }
 .container {
   width: 100%;
@@ -41,18 +42,21 @@ h1 {
   position: relative;
   margin: 1em;
   padding: 0.5em;
-  border-radius: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgb(192, 192, 192);
+  flex-basis: 20%;
 }
 .entry .name {
   font-weight: 600;
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: var(--black-text);
 }
 .entry img {
-  width: 50px;
+  width: 60px;
+  margin-bottom: 1em;
 }
 .entry .quote {
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 100;
   color: var(--black-text);
   text-align: center;
