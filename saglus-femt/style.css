@@ -1,0 +1,303 @@
+:root {
+    --brown-1: #5e3712;
+    --brown-2: #78481c;
+    --brown-3: #915f2c;
+    --brown-4: #d89f5a;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+.contact-head {
+    background-color: var(--brown-1);
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+    font-size: 0.8rem;
+}
+.contact {
+    background-color: var(--brown-1);
+    color: var(--brown-4);
+    padding: 0 4em;
+}
+.contact span a {
+    text-decoration: none;
+    color: var(--brown-4);
+}
+nav.custom {
+    background: var(--brown-2) !important;
+}
+nav.custom .nav-item .nav-link {
+    color: var(--brown-4);
+    font-size: 0.8rem;
+}
+nav.custom .nav-item {
+    margin-right: 2em;
+}
+nav.custom .nav-item .home {
+    position: relative;
+}
+nav.custom .nav-item .home::before {
+    content: "[";
+    position: absolute;
+    left: -5px;
+    font-size: 1.5rem;
+    top: -3px;
+    font-weight: 100;
+}
+nav.custom .nav-item .home::after {
+    content: "]";
+    position: absolute;
+    left: 50px;
+    font-size: 1.5rem;
+    top: -3px;
+    font-weight: 100;
+}
+/* nav.custom .navbar-brand {
+    position: relative;
+} */
+nav.custom .navbar-brand .logo {
+    position: absolute;
+    z-index: 100;
+    top: -2em; 
+    left: 2em;
+    height: 150px;
+    width: 150px;
+    border: 1px solid var(--brown-4);
+    background-color: var(--brown-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(50% 0%, 100% 0, 100% 61%, 50% 90%, 0 61%, 0 0);
+
+}
+nav.custom .navbar-brand .logo img {
+    width: 60%;
+    margin-top: -1.5em;
+}
+/***********************
+    HEADER
+**************************/
+header .carousel-item {
+    height: 80vh;
+    width: 100%;
+    background-color: gray;
+    border-bottom: 1px solid var(--brown-4);
+    background-image: url('bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+header {
+    position: relative;
+}
+header .carousel-static-content {
+    position: absolute;
+    top: 3em;
+    width: 100%;
+    height: 60vh;
+}
+header .carousel-static-content .col-lg-6 {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+header .carousel-static-content .col-lg-6 .header-video {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/*
+    FORM
+*/
+header .carousel-static-content .col-lg-6 .header-form {
+    padding: 1.2em;
+    background-color: #fff7eeb0;
+    width: 320px;
+    position: absolute;
+    top: 0;
+}
+header .carousel-static-content .col-lg-6 .header-form form {
+    display: flex;
+    flex-direction: column;
+}
+header .carousel-static-content .col-lg-6 .header-form form > *:not(:first-child) {
+    border: 1px solid var(--brown-1);
+    font-size: 0.8rem;
+    padding: 5px;
+    margin-bottom: 10px;
+    color: var(--brown-1);
+    opacity: 1;
+}
+header .carousel-static-content .col-lg-6 .header-form form input::placeholder,
+header .carousel-static-content .col-lg-6 .header-form form textarea::placeholder {
+    color: var(--brown-1);
+}
+
+header .carousel-static-content .col-lg-6 .header-form form > *:first-child {
+    font-weight: bold;
+    color: var(--brown-1);
+    font-size: 1.2rem;
+    opacity: 1;
+}
+header .carousel-static-content .col-lg-6 .header-form form > *:last-child {
+    background: var(--brown-1);
+    color: var(--brown-4);
+    font-size: 1rem;
+    opacity: 1;
+}
+header .carousel-control-prev span,
+header .carousel-control-next span {
+    padding: 1.3em;
+}
+header .carousel-control-prev span {
+    position: absolute;
+    left: 0;
+}
+header .carousel-control-next span {
+    position: absolute;
+    right: 0;
+}
+/*
+    HEADER CTA
+*/
+header .header-cta {
+    display: flex;
+    justify-content: center;
+
+}
+header .header-cta p {
+    background-color: var(--brown-1);
+    color: var(--brown-4);
+    padding: 1em 5em;
+    border: 2px solid var(--brown-4);
+    position: absolute;
+    bottom: -3em;
+}
+header .header-cta p span button {
+    outline: none;
+    border: 0;
+    color: var(--brown-4);
+    background: var(--brown-1);
+    border: 2px solid var(--brown-4);
+    border-radius: 30px;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+}
+@media (max-width: 991px) {
+    .contact-head {
+        justify-content: center;
+    }
+    header .carousel-item {
+        height: 120vh;
+    }
+    nav.custom .nav-item .home::before {
+        left: -10px;
+    }
+    nav.custom .nav-item .home::after {
+        left: 40px;
+    }
+    header .carousel-static-content .col-lg-6 .header-video {
+        position: absolute;
+        top: 0;
+        right: auto;
+    }
+    header .carousel-static-content .col-lg-6 .header-form {
+        position: absolute;
+        top: -6em;
+    }
+    nav.custom .navbar-brand .logo {
+        display: none;
+    }
+}
+@media (max-width: 500px) {
+    header .carousel-item {
+        height: 100vh;
+    }
+    header .carousel-static-content .col-lg-6 .header-video video {
+        width: 350px
+    }
+    header .carousel-static-content .col-lg-6 .header-form {
+        top: -10em;
+    }
+    header .header-cta span {
+        margin-left: 2em;
+    } 
+    header .header-cta p {
+        bottom: -4em;
+    }
+
+}
+/***************************
+    SECTION: SERVICES
+**************************/
+section.services {
+    padding-top: 5em;
+    background-color: var(--brown-1);
+    color: var(--brown-4);
+    display: flex;
+    flex-direction: column;
+}
+section.services .services-heading {
+    font-weight: 600;
+    font-size: 1.5em;
+    text-align: center;
+}
+section.services .services-desc {
+    text-align: center;
+    margin-top: -1em;
+    position: relative;
+}
+section.services .services-desc::after {
+    content: "";
+    height: 2px;
+    width: 70px;
+    display: block;
+    position: absolute;
+    background-color: var(--brown-4);
+    left: 48%;
+    bottom: -0.5em;
+}
+section.services .service-items {
+    padding: 0 5em;
+}
+section.services .service-items-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section.services .service-items-column .service-items-logo {
+    padding-top: 1em;
+    width: 150px;
+}
+section.services .service-items-column .service-items-logo img {
+    width: 100%;
+}
+section.services .service-items-column .service-items-desc {
+    margin-top: 1em;
+    width: 250px;
+    padding-left: 2em;
+}
+section.services .service-items-column .service-items-desc strong {
+    display: block;
+    text-transform: uppercase;
+}
+@media (max-width: 991px) {
+    section.services .services-desc::after {
+        left: 45%;
+    }
+}
+section.services button {
+    align-self: center;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    background: var(--brown-1);
+    color: var(--brown-4);
+    font-size: 0.9rem;
+    border: 2px solid var(--brown-4);
+    padding: 5px 25px;
+}
