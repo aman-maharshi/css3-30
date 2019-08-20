@@ -56,6 +56,12 @@ main {
 .dropdown__menu a:not(:last-child) {
     border-bottom: 1px solid rgb(224, 224, 224);
 }
+/*  
+    NOTE: 
+    .dropdonw:hover is used not .dropdown__btn:hover    
+*/
+
 .dropdown:hover .dropdown__menu {
     display: block;
 }
+
