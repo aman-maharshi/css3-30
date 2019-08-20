@@ -1,0 +1,40 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend Deca', sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+main {
+    height: 100vh;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dropdown {
+    padding: 1rem;
+    background: snow;
+    font-size: 1.5rem;
+}
+.dropdown__btn {
+    font-size: 1.5rem;
+    border: none;
+    padding: .75rem 1.25rem;
+    border-radius: 5px;
+    background-image: repeating-linear-gradient(134deg, #78e0da, #78e0da 10px, #A7E2C6 10px, #A7E2C6 30px);
+    font-weight: bold;
+    color:rgba(0,0,0,0.8);
+    border: 2px solid transparent;
+    transition: .3s ease;
+}
+.dropdown__btn:hover {
+    color: black;
+    cursor: pointer;
+    border-color: rgba(0,0,0,0.5);
+}
+.dropdown__menu {
+    margin-top: .5rem;
+}
