@@ -17,7 +17,11 @@ main {
 .dropdown {
     padding: 1rem;
     background: snow;
+    display: inline-block;
     font-size: 1.5rem;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
 }
 .dropdown__btn {
     font-size: 1.5rem;
@@ -27,14 +31,31 @@ main {
     background-image: repeating-linear-gradient(134deg, #78e0da, #78e0da 10px, #A7E2C6 10px, #A7E2C6 30px);
     font-weight: bold;
     color:rgba(0,0,0,0.8);
-    border: 2px solid transparent;
     transition: .3s ease;
-}
-.dropdown__btn:hover {
-    color: black;
+    display: inline-block;
     cursor: pointer;
-    border-color: rgba(0,0,0,0.5);
 }
 .dropdown__menu {
-    margin-top: .5rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: snow;
+    min-width: 200px;
+    display: none;
+}
+.dropdown__menu a {
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+.dropdown__menu a:hover {
+    background-color: pink;
+}
+.dropdown__menu a:not(:last-child) {
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+.dropdown:hover .dropdown__menu {
+    display: block;
 }
