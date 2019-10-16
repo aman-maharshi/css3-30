@@ -1,0 +1,33 @@
+/*
+    Animations
+--------------------*/
+.main__content {
+    animation: slide-up .6s ease-in forwards;
+    animation-delay: .8s;
+    opacity: 0;
+}
+.navbar-nav {
+    animation: slide-left .8s ease-in-out;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slide-left {
+    0% {
+        transform: translateX(1000%)
+    }
+    80% {
+        transform: translateX(-50px)
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

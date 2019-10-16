@@ -1,0 +1,121 @@
+/* @import 'animation.css'; */
+
+/*
+    HEADER & NAV
+------------------*/
+header {
+    padding: 4rem 1.25rem;
+}
+.nav-item {
+    padding: 0 1.5rem;
+}
+.nav-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgb(6, 20, 44) !important;
+}
+@media (max-width: 991px) {
+    header {
+        padding: 1.25rem;
+    }
+    .nav-link {
+        text-align: center;
+    }
+}
+/*
+    MAIN
+---------------*/
+main {
+    padding: 0 1.25rem;
+    margin-bottom: 1.25rem;
+}
+@media (min-width: 992px) {
+    main {
+        margin-bottom: 5rem;
+    }
+}
+.main__title {
+    font-size: 40px;
+    color: #000026;
+    font-weight: 700;
+    line-height: 1.4;
+}
+.main__subtitle {
+    font-size: 1.25rem;
+    color: #000026;
+    line-height: 1.3;
+}
+@media (max-width: 991px) {
+    .main__title {
+        font-size: 30px;
+        line-height: 1.1;
+    }
+}
+.main__input {
+    height: 45px;
+    border-color: #66646f;
+}
+.main__input::placeholder {
+    font-size: .9rem;
+    color: rgb(173, 173, 173);
+}
+.main__btn {
+    font-weight: 500;
+    padding: 9px 20px;
+    background: #2f65f9;
+}
+/*
+    Section One
+-----------------*/
+.section-one {
+    height: 100vh;
+    background: #f9f8fe;
+}
+.section-one__title {
+    color: #0c083b;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 3rem;
+}
+.section-one__desc {
+    margin-top: 2rem;
+    color: #0c083b;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.section-one__link {
+    display: inline-block;
+    margin-top: .9rem;
+    font-size: 1.1rem;
+    padding-bottom: 3px;
+    color: #3da08f;
+    border-bottom: 1px solid #3da08f;
+}
+.section-one__link:hover {
+    text-decoration: none;
+    color: #1c7768;
+}
+.section-one__card {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: white;
+    max-width: 375px;
+    box-shadow: 1px 1px 5px rgb(219, 219, 219);
+    border-radius: 5px;
+    
+}
+.card__image img {
+    display: block;
+}
+.card__text {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #0c083b;
+}
+@media (max-width: 576px) {
+    .section-one__title {
+        font-size: 30px;
+        margin-top: 1.5rem;
+    }
+}
