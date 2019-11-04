@@ -25,10 +25,6 @@ header {
 /*
     MAIN
 ---------------*/
-main {
-    padding: 0 1.25rem;
-    margin-bottom: 1.25rem;
-}
 @media (min-width: 992px) {
     main {
         margin-bottom: 5rem;
@@ -64,11 +60,11 @@ main {
     padding: 9px 20px;
     background: #2f65f9;
 }
+
 /*
     Section One
 -----------------*/
 .section-one {
-    height: 100vh;
     background: #f9f8fe;
 }
 .section-one__title {
@@ -76,7 +72,12 @@ main {
     font-size: 38px;
     font-weight: 700;
     line-height: 1.2;
-    margin-top: 3rem;
+}
+@media (max-width: 575px) {
+    .section-one__title {
+        font-size: 30px;
+        margin-top: 1.5rem;
+    }
 }
 .section-one__desc {
     margin-top: 2rem;
@@ -113,9 +114,47 @@ main {
     font-size: 0.9rem;
     color: #0c083b;
 }
-@media (max-width: 576px) {
-    .section-one__title {
-        font-size: 30px;
-        margin-top: 1.5rem;
-    }
+.card__author {
+    display: flex;
+    align-items: center;
+}
+.card__author__image img{
+    width: 35px;
+    border-radius: 50%;
+}
+.card__author__name {
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+.card__author__title {
+    font-size: 0.6rem;
+}
+
+/*
+    Section Two
+-----------------*/
+.section-two {
+    background: #575989;
+    color: white;
+}
+.section-two__title {
+    font-size: 2rem;
+    font-weight: 500;
+}
+.section-two__desc {
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+.custom-input {
+    height: 50px;
+}
+.custom-input::placeholder {
+    font-size: 0.8rem;
+    color: #b6b6b6;
+}
+.custom-btn {
+    background: #2f65f9;
+    padding: 12px 24px;
+    color: white;
+    font-weight: 700;
 }
