@@ -62,7 +62,7 @@ header {
 }
 
 /*
-    Section One
+    SECTION ONE
 -----------------*/
 .section-one {
     background: #f9f8fe;
@@ -131,7 +131,7 @@ header {
 }
 
 /*
-    Section Two
+    SECTION TWO
 -----------------*/
 .section-two {
     background: #575989;
@@ -147,6 +147,7 @@ header {
 }
 .custom-input {
     height: 50px;
+    box-shadow: 1px 2px 6px 0px rgba(0,0,0,0.3);
 }
 .custom-input::placeholder {
     font-size: 0.8rem;
@@ -157,4 +158,36 @@ header {
     padding: 12px 24px;
     color: white;
     font-weight: 700;
+    box-shadow: 1px 2px 6px 0px rgba(0,0,0,0.3);
 }
+.custom-btn:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+/*
+    FOOTER
+-------------*/
+footer {
+    background: #07043b;
+    color: white;
+    font-size: 1rem;
+}
+.footer__list {
+    list-style: none;
+}
+.footer__list li:not(:first-child) {
+    margin-top: 1rem;
+}
+.footer__list a {
+    text-decoration: none;
+    color: inherit;
+}
+.footer__list a:hover {
+    color: gray;
+}
+@media(min-width: 992px) {
+    .footer__list {
+        padding-left: 7rem;
+    }
+} 
