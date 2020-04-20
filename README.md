@@ -3,7 +3,6 @@
 
 1. [CMS using Bootstrap](https://aman-maharshi.github.io/css3-30/bootstrap-cms/)
 1. [Pricing Table](https://aman-maharshi.github.io/css3-30/pricing-table/)
-1. [Carousel Pure CSS](https://aman-maharshi.github.io/css3-30/carousel-pure-css/)
 1. [Registration Form](https://aman-maharshi.github.io/css3-30/registration-form/)
 1. [Fancy Buttons](https://aman-maharshi.github.io/css3-30/fancy-buttons/)
 1. [Sliding Panel Hover Image](https://aman-maharshi.github.io/css3-30/sliding-panel/)
