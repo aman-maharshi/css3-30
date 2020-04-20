@@ -1,7 +1,6 @@
 # Projects in CSS3
 > Click on the links below for the Live Preview of each Project
 
-1. [Light/Dark Theme Switcher](https://aman-maharshi.github.io/css3-30/dark-mode-toggle/)
 1. [CMS using Bootstrap](https://aman-maharshi.github.io/css3-30/bootstrap-cms/)
 1. [Pricing Table](https://aman-maharshi.github.io/css3-30/pricing-table/)
 1. [Carousel Pure CSS](https://aman-maharshi.github.io/css3-30/carousel-pure-css/)
