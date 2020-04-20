@@ -16,7 +16,6 @@
 
 
 ### Simple Elements
-1. [Preloader](https://aman-maharshi.github.io/css3-30/preloader/)
 1. [CSS Dropdown](https://aman-maharshi.github.io/css3-30/css-dropdown/)
 1. [Custom Checkbox](https://aman-maharshi.github.io/css3-30/custom-checkbox/)
 1. [Custom Navbar](https://aman-maharshi.github.io/css3-30/navbar-element/)
